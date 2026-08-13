@@ -500,22 +500,22 @@
               </tr>
               <tr>
                 <td><strong>9:40 - 10:10</strong></td>
-                <td>Keynote 1: Tom McGrath</td>
+                <td>Keynote 1: Tom McGrath, <i><a href="#" onclick="openModal('tom-modal'); return false;">"Mechanistic Explanations & Mechanistic Alignment"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
                 <td><strong>10:10 - 10:20</strong></td>
-                <td>Student Talk 1: Ann Huang</td>
+                <td>Student Talk 1: Ann Huang, <i><a href="#" onclick="openModal('ann-modal'); return false;">"One mechanism among many: traversing the space of functionally equivalent solutions"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
                 <td><strong>10:20 - 10:30</strong></td>
-                <td>Student Talk 2: Michael Hannah</td>
+                <td>Student Talk 2: Michael Hannah, <i><a href="#" onclick="openModal('michael-modal'); return false;">"Interpreting Bayesian Inference in Language Models"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
                 <td><strong>10:30 - 11:00</strong></td>
-                <td>Keynote 2: Natalie Shapira</td>
+                <td>Keynote 2: Natalie Shapira, <i><a href="#" onclick="openModal('natalie-modal'); return false;">"Agents of Chaos and Genuine Alignment"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
@@ -535,22 +535,22 @@
               </tr>
               <tr>
                 <td><strong>2:00 - 2:30</strong></td>
-                <td>Keynote 3: Belinda Li</td>
+                <td>Keynote 3: Belinda Li, <i><a href="#" onclick="openModal('belinda-modal'); return false;">"Consistency Is a Prerequisite for Interpretability"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
                 <td><strong>2:30 - 2:40</strong></td>
-                <td>Student Talk 3: Rohit Gandikota</td>
+                <td>Student Talk 3: Rohit Gandikota, <i><a href="#" onclick="openModal('rohit-modal'); return false;">"Gaze Heads: How VLMs Look at What They Describe"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
                 <td><strong>2:40 - 2:50</strong></td>
-                <td>Student Talk 4: Yoav Gur-Arieh</td>
+                <td>Student Talk 4: Yoav Gur-Arieh, <i><a href="#" onclick="openModal('yoav-modal'); return false;">"Faithfulness Metrics Don't Measure Faithfulness: A Meta-Evaluation with Ground Truth"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
                 <td><strong>2:50 - 3:20</strong></td>
-                <td>Keynote 4: Stephen Casper</td>
+                <td>Keynote 4: Stephen Casper, <i><a href="#" onclick="openModal('stephen-modal'); return false;">"Why I don't Work on Mechanistic Interpretability (plus what I'd do if I were)"</a></i></td>
                 <td>GSU 219B</td>
               </tr>
               <tr>
@@ -575,7 +575,7 @@
               </tr>
               <tr>
                 <td><strong>6:00+</strong></td>
-                <td>Social (registration required and coming soon!)</td>
+                <td>Social (registration required)</td>
                 <td><mark>CDS 17th floor</mark></td>
               </tr>
             </tbody>
@@ -1118,16 +1118,16 @@
     }
   </script>
 
-  <div id="amil-modal" class="modal">
+  <div id="tom-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('amil-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('tom-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/amil.jpg" alt="Amil Dravid">
+          <img src="assets/img/speakers/Tom.jpeg" alt="Tom McGrath">
           <div class="modal-header-info">
-            <h3>Amil Dravid</h3>
-            <p>UC Berkeley</p>
-            <p>Vision Transformers Don't Need Trained Registers</p>
+            <h3>Tom McGrath</h3>
+            <p>Goodfire</p>
+            <p>Mechanistic Explanations & Mechanistic Alignment</p>
           </div>
         </div>
         <!-- <div class="modal-section">
@@ -1136,21 +1136,43 @@
         </div> -->
         <div class="modal-section">
           <h4>Abstract</h4>
-          <p>We investigate the mechanism underlying a previously identified phenomenon in Vision Transformers – the emergence of high-norm tokens that lead to noisy attention maps (Darcet et al., 2024). We observe that in multiple models (e.g., CLIP, DINOv2), a sparse set of neurons is responsible for concentrating high-norm activations on outlier tokens, leading to irregular attention patterns and degrading downstream visual processing. While the existing solution for removing these outliers involves retraining models from scratch with additional learned register tokens, we use our findings to create a training-free approach to mitigate these artifacts. By shifting the high-norm activations from our discovered register neurons into an additional untrained token, we can mimic the effect of register tokens on a model already trained without registers. We demonstrate that our method produces cleaner attention and feature maps, enhances performance over base models across multiple downstream visual tasks, and achieves results comparable to models explicitly trained with register tokens. We then extend test-time registers to off-the-shelf vision-language models to improve their interpretability. Our results suggest that test-time registers effectively take on the role of register tokens at test-time, offering a training-free solution for any pre-trained model released without them.</p>
+          <p>In this talk I'll make three claims:</p>
+          <p>First, interpretability should aim at mechanistic explanations - explanations more like programs over variables - rather than annotated execution traces, and I’ll discuss methodological approaches that move in this direction.</p>
+          <p>Second, interpretability is a natural science and should try to advance as such: by building and testing hypotheses and abstractions in ways that interact with one another and are open to contradiction. I’ll suggest attempting to reverse engineer a small number of model organisms exhaustively as the best way to proceed here, and discuss ways that automation can accelerate this.</p>
+          <p>Third, and perhaps most controversially: the most promising result of all this is mechanistic alignment: steering training with interpretability, rather than solely monitoring inference (though we should do that too!). The central problem is doing this without breaking our ability to use interpretability to monitor - I’ll discuss potential approaches to this challenge.</p>
         </div>
       </div>
     </div>
   </div>
-  <div id="michael-modal" class="modal">
+  <div id="natalie-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('michael-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('natalie-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/michael.jpg" alt="Michael Hanna">
+          <img src="assets/img/speakers/Natalie.jpeg" alt="Natalie Shapira">
           <div class="modal-header-info">
-            <h3>Michael Hanna</h3>
-            <p>University of Amsterdam</p>
-            <p>Circuit-tracer: A New Library for Feature Circuits</p>
+            <h3>Natalie Shapira</h3>
+            <p>Northeastern</p>
+            <p>Agents of Chaos and Genuine Alignment</p>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4>Abstract</h4>
+          <p>Recent advances in AI have led to increasingly autonomous systems exhibiting what is often referred to as agentic behavior, including goal-directed planning, strategy adaptation, decision-making, and interaction with complex environments. While such capabilities are promising, they also introduce potential risks, including misalignment and unintended emergent behaviors that are difficult to anticipate or control. In this talk, I highlight how agentic models can exhibit failure modes that resemble "agents of chaos," producing unpredictable, misaligned, or strategically opaque behavior.  I continue by describing the alignment problem and suggest a new approach - Genuine Alignment. I conclude with an example that shows how AI safety can be improved by mechanistic interpretability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="belinda-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('belinda-modal')">&times;</span>
+      <div class="modal-body">
+        <div class="modal-header">
+          <img src="assets/img/speakers/Belinda.jpeg" alt="Belinda Li">
+          <div class="modal-header-info">
+            <h3>Belinda Li</h3>
+            <p>Anthropic & U Chicago</p>
+            <p>Consistency Is a Prerequisite for Interpretability</p>
           </div>
         </div>
         <!-- <div class="modal-section">
@@ -1159,44 +1181,41 @@
         </div> -->
         <div class="modal-section">
           <h4>Abstract</h4>
-          <p>Feature circuits aim to shed light on LLM behavior by identifying the features that are causally responsible for a given LLM output, and connecting them into a directed graph, or circuit, that explains how both each feature and each output arose. However, performing circuit analysis is challenging: the tools for finding, visualizing, and verifying feature circuits are complex and spread across multiple libraries. To solve this, we introduce circuit-tracer, an open-source library for identifying feature circuits. circuit-tracer provides an integrated pipeline for finding, visualizing, annotating, and performing interventions on such feature circuits, tested on models with up to 14 billion parameters. We make circuit-tracer available to both developers and end users, via integration with tools such as Neuronpedia, which provides a user-friendly interface.</p>
+          <p>The interpretability of a system is bounded by the regularities it exhibits: however good our explanation tools become, their predictiveness is limited by the entropy of what they explain. At some point we should ask whether our limitations reflect a flaw in the tools or in the underlying system. This talk argues for starting from the latter. This is not a return to symbolic or interpretable-by-design approaches, but an argument for building models that are behaviorally self-consistent.</p>
+          <p>I'll begin by presenting a general framework for optimizing models for self-consistency, then focus on introspection as its natural reference point: rather than asking a model to conform to an externally imposed theory of how it should work, we ask it to conform to its own account of how it does, or, in the other direction, ask that account to be faithful to what the model actually does. Beyond regularization, this allows us to treat introspective explanations as an interpretability method in their own right. Drawing on work training self-descriptions to be faithful to a model's internals, counterfactual behaviors, and professed values, I'll show encouraging generalization within each. I’ll also discuss ongoing work and open problems in doing this training at scale. Finally, I’ll close by arguing that interpretability researchers should take part in designing and training AI systems, not only in analyzing them afterward.</p>
         </div>
       </div>
     </div>
   </div>
-  <div id="helena-modal" class="modal">
+  <div id="stephen-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('helena-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('stephen-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/helena.jpg" alt="Helena Casademunt">
+          <img src="assets/img/speakers/Cas.jpg" alt="Stephen Casper">
           <div class="modal-header-info">
-            <h3>Helena Casademunt</h3>
+            <h3>Stephen Casper</h3>
             <p>Harvard University</p>
-            <p>Steering Out-of-Distribution Generalization with Concept Ablation Fine-Tuning</p>
+            <p>Why I Don't Work on Mechanistic Interpretability (plus what I'd do if I were)</p>
           </div>
         </div>
-        <!-- <div class="modal-section">
-          <h4>Abstract</h4>
-          <p>Transformers are still the dominant architecture for language modeling (and generative AI more broadly). This talk will speculate on how Transformers (in particular the attention mechanism) will change over the near future.</p>
-        </div> -->
         <div class="modal-section">
           <h4>Abstract</h4>
-          <p>Fine-tuning large language models (LLMs) can lead to unintended out-of-distribution generalization. Standard approaches to this problem rely on modifying training data, for example by adding data that better specify the intended generalization. However, this is not always practical. We introduce Concept Ablation Fine-Tuning (CAFT), a technique that leverages interpretability tools to control how LLMs generalize from fine-tuning, without needing to modify the training data or otherwise use data from the target distribution. Given a set of directions in an LLM's latent space corresponding to undesired concepts, CAFT works by ablating these concepts with linear projections during fine-tuning, steering the model away from unintended generalizations. We successfully apply CAFT to three fine-tuning tasks, including emergent misalignment, a phenomenon where LLMs fine-tuned on a narrow task generalize to give egregiously misaligned responses to general questions. Without any changes to the fine-tuning data, CAFT reduces misaligned responses by 10x without degrading performance on the training distribution. Overall, CAFT represents a novel approach for steering LLM generalization without modifying training data.</p>
+          <p>The goal of this talk is to get you to quit working on mechanistic interpretability. But even if I fall short, my hope is to offer useful material for thinking critically about your work. We will work through three layers of objections to interpretability research: the "engineer's" argument, the "investor's" argument, and the "red-pill" argument before questioning if and how interpretability research could have prevented major recent AI incidents. Finally, we will conclude with ideas about several neglected directions for interpretability research that I would be the most interested to see. </p>
         </div>
       </div>
     </div>
   </div>
-  <div id="andrew-modal" class="modal">
+  <div id="ann-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('andrew-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('ann-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/andrew.jpg" alt="Andrew Lee">
+          <img src="assets/img/speakers/ann.jpeg" alt="Ann Huang">
           <div class="modal-header-info">
-            <h3>Andrew Lee</h3>
-            <p>Harvard University</p>
-            <p>Shared Global and Local Geometry of Language Model Embeddings</p>
+            <h3>Ann Huang</h3>
+            <p>Harvard</p>
+            <p>One Mechanism Among Many: Traversing the space of functionally equivalent solutions</p>
           </div>
         </div>
         <!-- <div class="modal-section">
@@ -1205,47 +1224,26 @@
         </div> -->
         <div class="modal-section">
           <h4>Abstract</h4>
-          <p>Researchers have recently suggested that models share common representations. In our work, we find numerous geometric similarities across the token embeddings of large language models. First, we find ``global'' similarities: token embeddings often share similar relative orientations. Next, we characterize local geometry in two ways: (1) by using Locally Linear Embeddings, and (2) by defining a simple measure for the intrinsic dimension of each embedding. Both characterizations allow us to find local similarities across token embeddings. Additionally, our intrinsic dimension demonstrates that embeddings lie on a lower dimensional manifold, and that tokens with lower intrinsic dimensions often have semantically coherent clusters, while those with higher intrinsic dimensions do not. Based on our findings, we introduce EMB2EMB, a simple application to linearly transform steering vectors from one language model to another, despite the two models having different dimensions.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal for Tamar Rott Shaham -->
-  <div id="tamar-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('tamar-modal')">&times;</span>
-      <div class="modal-body">
-        <div class="modal-header">
-          <img src="assets/img/speakers/tamar.jpg" alt="Tamar Rott Shaham">
-          <div class="modal-header-info">
-            <h3>Tamar Rott Shaham</h3>
-            <p>MIT</p>
-            <p>Can Language Models Interpret Humans?</p>
-          </div>
-        </div>
-        <!-- <div class="modal-section">
-          <h4>Abstract</h4>
-          <p>Transformers are still the dominant architecture for language modeling (and generative AI more broadly). This talk will speculate on how Transformers (in particular the attention mechanism) will change over the near future.</p>
-        </div> -->
-        <div class="modal-section">
-          <h4>Bio</h4>
-          <p>Tamar Rott Shaham is an incoming assistant professor at the Faculty of Mathematics and Computer Science at Weizmann. She is currently a postdoctoral researcher at MIT CSAIL in Antonio Torralba’s lab. She received her PhD from the ECE Technion, supervised by Prof. Tomer Michaeli. Tamar has received several awards, including the ICCV 2019 Best Paper Award (Marr Prize), the Google WTM Scholarship, the Adobe Research Fellowship, the Rothchild Postdoctoral Fellowship, the Vatat-Zuckerman Postdoctoral Scholarship and the Schmidt Postdoctoral Award.</p>
+          <p>A central promise of mechanistic interpretability is that when we reverse-engineer a trained model, we can uncover a generalizable mechanism for how the model transforms input data to achieve a specific task. But is that mechanism a universal one, uniquely determined by the task, or just one of many the task admits? We argue that learning problems in the era of overparameterized models are underspecified, and each one admits an entire manifold of functionally equivalent solutions; training samples only a subset of it, one shaped by the learning dynamics and implicit bias of the optimizer.</p>
+          <p>To study the structure of the solution space and what’s shared across all solutions, we develop a scalable method to traverse the weight space of any differentiable network while preserving task performance, which we call Hessian null space continuation. Near a solution, the parameter Hessian encodes the local loss landscape geometry – moving along its parameter directions with small eigenvalues preserves the loss while reshaping the network representations. Our method repeatedly steps along these flat directions and gradient descent on a function-preserving loss, so the network maintains its outputs while reorganizing its internal computations.</p>
+          <p>We show that we can find maximally diverse solutions by traversing the weight space in the direction that minimizes a similarity metric such as Centered Kernel Alignment. Applied to RNNs trained on a memory task and Vision Transformers trained on ImageNet, we find solutions that are geometrically and dynamically distinct. In networks trained on a target pursuit Reinforcement Learning task, our method finds policies with distinct behavioral strategies at preserved reward. We further show that the representational freedom of networks grows with model size and shrinks with task complexity.</p>
+          <p>Overall, we demonstrate that the task itself does not enforce the solution: a circuit mechanism discovered from one trained model is only one point in a space of functionally equivalent solutions. By constructing this manifold explicitly, our method allows us to separate what is conserved across all solutions, and therefore demanded by the task, from what is idiosyncratic to the particular solution that training happened to select.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for Ekdeep Singh Lubana -->
-  <div id="ekdeep-modal" class="modal">
+  <!-- Modal for Michael Hannah -->
+  <div id="michael-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('ekdeep-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('michael-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/ekdeep.jpeg" alt="Ekdeep Singh Lubana">
+          <img src="assets/img/speakers/michael.jpg" alt="Michael Hannah">
           <div class="modal-header-info">
-            <h3>Ekdeep Singh Lubana</h3>
-            <p>Harvard</p>
-            <p>Looking Inwards: Implicit Assumptions Formally Constrain Mechanistic Interpretability</p>
+            <h3>Michael Hannah</h3>
+            <p>University of Amsterdam</p>
+            <p>Interpreting Bayesian Inference in Language Models</p>
           </div>
         </div>
         <!-- <div class="modal-section">
@@ -1253,24 +1251,24 @@
           <p>Even after fine-tuning and reinforcement learning, language models can be difficult to control reliably with prompts alone. This talk proposes a new approach to specifying and executing tasks using language models, based on probabilistic programming. Language model probabilistic programs precisely and compositionally specify target distributions from which to generate samples. These distributions generally arise by applying hard and soft constraints to the default output distributions of one or more LMs. Samples can then be drawn approximately from these target distributions using sequential Monte Carlo — and their quality improved via test-time scaling of the number of particles used by the algorithm. This talk will demonstrate that language model probabilistic programs can improve downstream performance on a broad variety of tasks, from Python code generation to molecule synthesis to trip planning. It will also show how language models can themselves write language model probabilistic programs, enabling small LMs can outperform frontier models on a number of challenging tasks.</p>
         </div> -->
         <div class="modal-section">
-          <h4>Bio</h4>
-          <p>Ekdeep Singh Lubana is a research fellow at the CBS-NTT Program in Physics of Intelligence at Harvard University. His research focuses on developing predictive theories for phenomena observed during evaluation and deployment of neural networks—e.g., emergent learning curves, in-context learning novel concept structures, and effects of post-training. His recent work has focused on making explicit assumptions underlying tools popularly used for neural network interpretability. Ekdeep completed a PhD co-affiliated at University of Michigan and Center for Brain Science, Harvard.</p>
+          <h4>Abstract</h4>
+          <p>LMs' behavior sometimes reflects Bayesian reasoning strategies, but do they implement Bayesian reasoning internally? In this paper, we test this using the number game, a classic setting from cognitive science where participants see a set of numbers compatible with an unstated rule, and must infer if a query number is also compatible. We first examine LMs' behavior on the task, finding that they reproduce many human behaviors, and can be relatively well fit by a Bayesian model. We next find the circuits responsible for increasing the LM's confidence in its answers, and the neurons representing the hypotheses that LMs entertain. We then return to our Bayesian model, using our knowledge of the model's circuits to update its functional form and construct an interpretable, explicit model of LM behavior without any parameters learned from model outputs. Finally, we show how the mechanisms behind this circuit are re-used across many different tasks.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for Lee Sharkey -->
-  <div id="lee-modal" class="modal">
+  <!-- Modal for Rohit -->
+  <div id="rohit-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('lee-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('rohit-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/lee.webp" alt="Lee Sharkey">
+          <img src="assets/img/speakers/rohit.jpeg" alt="Rohit Gandikota">
           <div class="modal-header-info">
-            <h3>Lee Sharkey</h3>
-            <p>Goodfire</p>
-            <p>Mech Interp: Where should we go from here?</p>
+            <h3>Rohit Gandikota</h3>
+            <p>Northeastern</p>
+            <p>Gaze Heads: How VLMs Look at What They Describe</p>
           </div>
         </div>
         <!-- <div class="modal-section">
@@ -1278,24 +1276,24 @@
           <p>Abstract coming soon.</p>
         </div> -->
         <div class="modal-section">
-          <h4>Bio</h4>
-          <p>Lee is a Principal Investigator at Goodfire (London) where his team work on developing new interpretability methods. His previous work includes Attribution-based Parameter Decomposition and sparse autoencoders as a solution to superposition. Prior to Goodfire, Lee co-founded Apollo Research and led the interpretability team there.</p>
+          <h4>Abstract</h4>
+          <p>How a vision-language model internally solves the task of describing an image is far from obvious. We find that the model develops a specific mechanism for this: a small set of attention heads in its language-model backbone, which we call gaze heads, whose attention tracks the image region the model is currently describing. We find them with a simple correlation score from a few forward passes, using comic strips as a controlled testbed where narrative order is laid out spatially. These gaze heads do not just track the image tokens being described: redirecting their attention to a chosen region forces the VLM to describe that region instead. A single attention-mask intervention on the top-100 gaze heads, fewer than 9% of all heads, steers the model's answer to any chosen comic panel at 83.1% accuracy, while the same intervention on random heads fails to redirect the answer, and intervening on all heads destroys generation. The same lever also extends to continuous control: switching the gaze target mid-generation makes the model wrap up its current panel description and move to the new one within a few tokens. Beyond comics, the same intervention redirects answers to chosen regions in natural COCO images. The mechanism further recurs across model sizes from 2B to 32B parameters and across other VLM architectures, although some frozen-encoder families show no comparable head set. More broadly, this shows that targeted edits identified through mechanistic analysis can serve as practical inference-time levers for steering multimodal model behavior, without any retraining. Our code, interactive demo, and datasets are available at https://gaze.baulab.info/</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal for Aaron Mueller -->
-  <div id="aaron-modal" class="modal">
+  <!-- Modal for Yoav -->
+  <div id="yoav-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('aaron-modal')">&times;</span>
+      <span class="close-modal" onclick="closeModal('yoav-modal')">&times;</span>
       <div class="modal-body">
         <div class="modal-header">
-          <img src="assets/img/speakers/aaron.jpeg" alt="Aaron Mueller">
+          <img src="assets/img/speakers/yoav.jpg" alt="Yoav Gur-Arieh">
           <div class="modal-header-info">
-            <h3>Aaron Mueller</h3>
-            <p>Boston University</p>
-            <p>Beyond Human Concepts: Evaluating and Applying Unsupervised Interpretability</p>
+            <h3>Yoav Gur-Arieh</h3>
+            <p>Tel Aviv University</p>
+            <p>Faithfulness Metrics Don't Measure Faithfulness: A Meta-Evaluation with Ground Truth</p>
           </div>
         </div>
         <!-- <div class="modal-section">
@@ -1303,8 +1301,10 @@
           <p>We describe recent methods that enable large language models (LLMs) to self-improve, increasing their performance on tasks relevant to human users. In particular we describe the methods of Self-Rewarding LLMs (https://arxiv.org/abs/2401.10020), Iterative Reasoning Preference Optimization (https://arxiv.org/abs/2404.19733), Thinking LLMs (https://arxiv.org/abs/2410.10630), Meta-Rewarding LLMs (https://arxiv.org/abs/2407.19594), and more!</p>
         </div> -->
         <div class="modal-section">
-          <h4>Bio</h4>
-          <p>Aaron Mueller is an assistant professor in the Department of Computer Science at Boston University. His research centers on developing methods and evaluations for mechanistic interpretability inspired by causal and linguistic principles, and applying these for precise model control and improved efficiency. He completed a Ph.D. at Johns Hopkins University and was a Zuckerman postdoctoral fellow at Northeastern and the Technion. His work has been published in ML and NLP venues (such as ICLR, ACL, and EMNLP) and has won awards at TMLR and ACL. He has recently been featured in the New York Times (2023) and IEEE Spectrum (2024) as an organizer of the BabyLM Challenge.</p>
+          <h4>Abstract</h4>
+          <p>Chains of thought (CoTs) have become central in interpreting and auditing behaviors of large language models. Yet growing evidence suggests that these traces often fail to faithfully represent the computations behind a model's predictions. Several faithfulness metrics have been proposed, but whether they indeed measure faithfulness remains unknown. Answering this requires ground-truth labels, which are hard to obtain since internal computations are not directly observable. Consequently, most works proposing metrics report only absolute scores or comparisons to prior metrics, and the few existing benchmarks rely on proxies like plausibility or importance, properties orthogonal to faithfulness that can mislead about whether a CoT can be trusted.</p>
+          <p>We address this challenge by constructing tasks whose outputs reveal which intermediate computations must have produced them, and developing an automated labeling pipeline that yields ground-truth faithfulness labels at both the step and CoT level.</p>
+          <p>Building on this methodology, we present BonaFide, a benchmark of 3,066 labeled CoTs across 13 tasks and 10 models, and use it to conduct the first systematic evaluation of prominent faithfulness metrics. Our experiments show that most metrics perform near chance, exhibit strong prediction biases and degrade on longer CoTs. The best metric reaches only 0.70 AUROC at the CoT level while another reaches 0.59 at the step level, with neither transferring across settings, while entailing prohibitively high computational cost. Our results expose fundamental gaps in current faithfulness evaluation and call for the development of more reliable and efficient metrics.</p>
         </div>
       </div>
     </div>
